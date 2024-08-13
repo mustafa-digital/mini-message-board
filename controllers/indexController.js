@@ -1,7 +1,10 @@
 /* indexController.js */
 
-module.exports = {
+const indexController = {
+
   get: (req, res) => {
-    res.render('pages/index');
+    res.render('pages/index', {messages: res.locals.messages});
   }
-};
+}
+
+module.exports = indexController;
