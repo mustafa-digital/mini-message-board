@@ -9,5 +9,6 @@ const controller = require('../controllers/newController');
 
 // send requests to controller
 newRouter.get('/', controller.get);
+newRouter.post('/', controller.post);
 
 module.exports = newRouter;

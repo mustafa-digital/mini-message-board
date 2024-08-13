@@ -1,9 +1,11 @@
 /* indexController.js */
+const navLinks = require('../navLinks');
+const messages = require('../messages');
 
 const indexController = {
 
   get: (req, res) => {
-    res.render('pages/index', {messages: res.locals.messages});
+    res.render('pages/index', {links: navLinks, messages: messages});
   }
 }
 
