@@ -5,10 +5,10 @@
 <ul>
   <% for (let i = 0; i < messages.length; i++) { %>
     <li>
-      <h3><%= messages[i].user %></h3>
+      <h3><%= messages[i].username %></h3>
       <p><%= messages[i].text %></p>
       <p><%= messages[i].added %></p>
-      <a href="/messages/<%= i %>">Open</a>
+      <a href="/messages/<%= messages[i].id %>">Open</a>
     </li>
     <% } %>
 </ul>

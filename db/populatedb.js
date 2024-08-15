@@ -7,14 +7,14 @@ CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   text VARCHAR ( 255 ),
   username VARCHAR ( 12 ),
-  added DATE
+  added TIMESTAMP WITH TIME ZONE 
 );
 
 INSERT INTO messages (text, username, added) 
-VALUES ('Hi there!', 'Amando', '1999-01-08');
+VALUES ('Hi there!', 'Amando', CURRENT_TIMESTAMP);
 
 INSERT INTO messages (text, username, added) 
-VALUES ('Hello World!', 'Charles', '1999-01-08');
+VALUES ('Hello World!', 'Charles', CURRENT_TIMESTAMP);
 `;
 
 const DELETE_TABLE = `
